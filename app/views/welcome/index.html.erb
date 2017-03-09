@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+	<h1>Bienvenido <%= current_user.name %> </h1>
+	<li class="col-md">
+		<%= link_to "Edita tu perfil", edit_user_registration_path %>
+		<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+	</li>
+<% else %>
+	<li class="col-md">
+		<%=link_to "Iniciar sesión", new_user_session_path %>	
+	</li>
+
+	<li class="col-md">
+		<%=link_to "Crear cuenta", new_user_registration_path %>	
+	</li>
+	<h1>Bienvenido</h1>
+<% end %>	
+
+
+
