@@ -10,12 +10,8 @@ module Api
       end
 
       def destroy
-        if current_user && Tiddle.expire_token(current_user, request)
-          head :ok
-        else
-          # Client tried to expire an invalid token
-          render json: { error: 'invalid token' }, status: 401
-        end
+        Tiddle.expire_token(current_user, request) if current_user
+        render json: {loged_out: "loged_out"}
       end
 
     end

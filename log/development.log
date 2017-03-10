@@ -9130,3 +9130,481 @@ them to actual class references.  For example:
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/vehicles" for ::1 at 2017-03-10 01:32:44 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VehiclesController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-03-10 01:32:44 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 184ms (Views: 172.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-03-10 01:32:46 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X+C2HQYpaLmwQTo48I6SSiN/3WAP13zMQRNrXVwLCdBPZYeJfoy5GTIyfNYY9XKNrbQqbKB0WT/j68HEcq/miA==", "user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X+C2HQYpaLmwQTo48I6SSiN/3WAP13zMQRNrXVwLCdBPZYeJfoy5GTIyfNYY9XKNrbQqbKB0WT/j68HEcq/miA==", "user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 151ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-10 01:32:49 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-03-10 01:32:52 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 46ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up.json" for ::1 at 2017-03-10 01:33:05 -0600
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"name"=>"Jacobo", "last_name"=>"Tapia", "second_last_name"=>"De la Rosa", "email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]"}, "registration"=>{"user"=>{"name"=>"Jacobo", "last_name"=>"Tapia", "second_last_name"=>"De la Rosa", "email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]"}}}
+Unpermitted parameter: confirm_password
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "last_name", "second_last_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jacob.et.cetera@gmail.com"], ["encrypted_password", "$2a$11$5d.Jpg3fT4Pfszwr03NXs.T/QXLY/fo6nosYFzH.mTNrTqie8a.Ci"], ["created_at", 2017-03-10 07:33:06 UTC], ["updated_at", 2017-03-10 07:33:06 UTC], ["name", "Jacobo"], ["last_name", "Tapia"], ["second_last_name", "De la Rosa"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-10 07:33:06 UTC], ["last_sign_in_at", 2017-03-10 07:33:06 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-03-10 07:33:06 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 158ms (Views: 10.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/login.json" for ::1 at 2017-03-10 01:33:11 -0600
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-10 07:33:11 UTC], ["sign_in_count", 2], ["updated_at", 2017-03-10 07:33:11 UTC], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT  "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."body" = ? ORDER BY "authentication_tokens"."id" ASC LIMIT ?[0m  [["body", "07ba599432e858f7df5c889d0361ed9e4995f1bcec02a02d7cc6589cc25e0b01"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "authentication_tokens" ("body", "user_id", "last_used_at", "ip_address", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "07ba599432e858f7df5c889d0361ed9e4995f1bcec02a02d7cc6589cc25e0b01"], ["user_id", 1], ["last_used_at", 2017-03-10 07:33:12 UTC], ["ip_address", "::1"], ["user_agent", "PostmanRuntime/3.0.1"], ["created_at", 2017-03-10 07:33:12 UTC], ["updated_at", 2017-03-10 07:33:12 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.52ms)
+Completed 200 OK in 346ms (Views: 6.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-03-10 01:33:21 -0600
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.json.jbuilder (3.3ms)
+Completed 200 OK in 19ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/vehicles.json" for ::1 at 2017-03-10 01:33:27 -0600
+Processing by VehiclesController#create as JSON
+  Parameters: {"user_id"=>2, "brand"=>"VW", "model"=>"Bocho", "year"=>1995, "vehicle"=>{"user_id"=>2, "brand"=>"VW", "model"=>"Bocho", "year"=>1995}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.08ms)
+Completed 422 Unprocessable Entity in 16ms (Views: 3.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/vehicles.json" for ::1 at 2017-03-10 01:33:33 -0600
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"user_id": 2,
+    "brand": "VWW,
+    "model": "Bocho",
+    "year": 1995
+}
+  
+ActionDispatch::ParamsParser::ParseError (822: unexpected token at '{
+	"user_id": 2,
+    "brand": "VWW,
+    "model": "Bocho",
+    "year": 1995
+}'):
+  
+actionpack (5.0.2) lib/action_dispatch/http/parameters.rb:88:in `rescue in parse_formatted_parameters'
+actionpack (5.0.2) lib/action_dispatch/http/parameters.rb:82:in `parse_formatted_parameters'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:354:in `block in POST'
+rack (2.0.1) lib/rack/request.rb:57:in `fetch'
+rack (2.0.1) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:353:in `POST'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:282:in `_wrapper_enabled?'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:231:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.1ms)
+Started POST "/vehicles.json" for ::1 at 2017-03-10 01:33:46 -0600
+Processing by VehiclesController#create as JSON
+  Parameters: {"user_id"=>2, "brand"=>"VWW", "model"=>"Bocho", "year"=>1995, "vehicle"=>{"user_id"=>2, "brand"=>"VWW", "model"=>"Bocho", "year"=>1995}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "vehicles" ("user_id", "brand", "model", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["brand", "VWW"], ["model", "Bocho"], ["year", 1995], ["created_at", 2017-03-10 07:33:46 UTC], ["updated_at", 2017-03-10 07:33:46 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (0.4ms)
+  Rendered vehicles/show.json.jbuilder (1.3ms)
+Completed 201 Created in 14ms (Views: 7.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-03-10 01:34:00 -0600
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-03-10 01:34:05 -0600
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/_vehicle.json.jbuilder (0.6ms)
+  Rendered vehicles/index.json.jbuilder (2.1ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:34:18 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"bAXMrSFm-PtKvhHXE72x", "X-User-Email"=>"jatapiaro@gmail.com", "session"=>{"X-User-Token"=>"bAXMrSFm-PtKvhHXE72x", "X-User-Email"=>"jatapiaro@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login.json" for ::1 at 2017-03-10 01:34:28 -0600
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-10 07:34:29 UTC], ["last_sign_in_at", 2017-03-10 07:33:11 UTC], ["sign_in_count", 3], ["updated_at", 2017-03-10 07:34:29 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT  "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."body" = ? ORDER BY "authentication_tokens"."id" ASC LIMIT ?[0m  [["body", "ed7381c101fd79c30a2326c0e633e7e628e9c0cc4277ebc9b219a50b86d9f1c7"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "authentication_tokens" ("body", "user_id", "last_used_at", "ip_address", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "ed7381c101fd79c30a2326c0e633e7e628e9c0cc4277ebc9b219a50b86d9f1c7"], ["user_id", 1], ["last_used_at", 2017-03-10 07:34:29 UTC], ["ip_address", "::1"], ["user_agent", "PostmanRuntime/3.0.1"], ["created_at", 2017-03-10 07:34:29 UTC], ["updated_at", 2017-03-10 07:34:29 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.46ms)
+Completed 200 OK in 130ms (Views: 0.8ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:34:37 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jatapiaro@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jatapiaro@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:34:44 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:34:49 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-03-10 01:35:40 -0600
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/_vehicle.json.jbuilder (0.6ms)
+  Rendered vehicles/index.json.jbuilder (7.1ms)
+Completed 200 OK in 39ms (Views: 13.0ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:35:45 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+No template found for Users::SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 222ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:36:48 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:36:54 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:36:54 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:37:09 -0600
+  
+SyntaxError (/Users/jacobotapia/Desktop/gasolineras/app/controllers/users/sessions_controller.rb:14: syntax error, unexpected '}', expecting =>):
+  
+app/controllers/users/sessions_controller.rb:14: syntax error, unexpected '}', expecting =>
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:37:11 -0600
+  
+SyntaxError (/Users/jacobotapia/Desktop/gasolineras/app/controllers/users/sessions_controller.rb:14: syntax error, unexpected '}', expecting =>):
+  
+app/controllers/users/sessions_controller.rb:14: syntax error, unexpected '}', expecting =>
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:37:28 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:37:37 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"9pzDLDXDb7Ugy4NbM2d1", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login.json" for ::1 at 2017-03-10 01:37:41 -0600
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-10 07:37:41 UTC], ["last_sign_in_at", 2017-03-10 07:34:29 UTC], ["sign_in_count", 4], ["updated_at", 2017-03-10 07:37:41 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT  "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."body" = ? ORDER BY "authentication_tokens"."id" ASC LIMIT ?[0m  [["body", "f28dd4fa1aac596e1b00861925473ae858a9b6fad57fd043eb6dc1a0b9c06d8b"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "authentication_tokens" ("body", "user_id", "last_used_at", "ip_address", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "f28dd4fa1aac596e1b00861925473ae858a9b6fad57fd043eb6dc1a0b9c06d8b"], ["user_id", 1], ["last_used_at", 2017-03-10 07:37:41 UTC], ["ip_address", "::1"], ["user_agent", "PostmanRuntime/3.0.1"], ["created_at", 2017-03-10 07:37:41 UTC], ["updated_at", 2017-03-10 07:37:41 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.36ms)
+Completed 200 OK in 154ms (Views: 0.8ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-03-10 01:37:56 -0600
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"AvP4BpH7qL7yxWek_bzg", "X-User-Email"=>"jacob.et.cetera@gmail.com", "session"=>{"X-User-Token"=>"AvP4BpH7qL7yxWek_bzg", "X-User-Email"=>"jacob.et.cetera@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-03-10 01:38:05 -0600
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/_vehicle.json.jbuilder (0.6ms)
+  Rendered vehicles/index.json.jbuilder (7.3ms)
+Completed 200 OK in 20ms (Views: 13.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login.json" for ::1 at 2017-03-10 01:38:12 -0600
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-10 07:38:12 UTC], ["last_sign_in_at", 2017-03-10 07:37:41 UTC], ["sign_in_count", 5], ["updated_at", 2017-03-10 07:38:12 UTC], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT  "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."body" = ? ORDER BY "authentication_tokens"."id" ASC LIMIT ?[0m  [["body", "82123665e697d45fdca4799d8b2e80ed4e10f3294cb610b29dad0bcc151e8d7c"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "authentication_tokens" ("body", "user_id", "last_used_at", "ip_address", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "82123665e697d45fdca4799d8b2e80ed4e10f3294cb610b29dad0bcc151e8d7c"], ["user_id", 1], ["last_used_at", 2017-03-10 07:38:12 UTC], ["ip_address", "::1"], ["user_agent", "PostmanRuntime/3.0.1"], ["created_at", 2017-03-10 07:38:12 UTC], ["updated_at", 2017-03-10 07:38:12 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Completed 200 OK in 133ms (Views: 0.7ms | ActiveRecord: 2.8ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "authentication_tokens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "last_used_at" datetime, "ip_address" varchar, "user_agent" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_authentication_tokens_on_user_id" ON "authentication_tokens" ("user_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "last_name" varchar, "second_last_name" varchar)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "brand" varchar, "model" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170310004137)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170309213739),
+(20170309213937),
+(20170309231114);
+
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-10 07:38:31 UTC], ["updated_at", 2017-03-10 07:38:31 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "authentication_tokens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "last_used_at" datetime, "ip_address" varchar, "user_agent" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_authentication_tokens_on_user_id" ON "authentication_tokens" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "last_name" varchar, "second_last_name" varchar)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "brand" varchar, "model" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170310004137)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170309213739),
+(20170309213937),
+(20170309231114);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-10 07:38:31 UTC], ["updated_at", 2017-03-10 07:38:31 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
