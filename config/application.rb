@@ -13,6 +13,7 @@ module Gasolineras
     # -- all .rb files in that directory are automatically loaded.
     
   	config.active_record.raise_in_transactional_callbacks = true
+    ##Si y solo si se quiere hacer un api
     ##config.middleware.delete ActionDispatch::Session::CookieStore
 
 
