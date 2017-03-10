@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
 	has_many :authentication_tokens
+	has_many :vehicles
 
 	devise :database_authenticatable, :registerable, :recoverable, 
 	       :rememberable, :trackable, :validatable, :token_authenticatable

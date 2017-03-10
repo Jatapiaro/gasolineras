@@ -13,6 +13,8 @@ module Gasolineras
     # -- all .rb files in that directory are automatically loaded.
     
   	config.active_record.raise_in_transactional_callbacks = true
+    ##config.middleware.delete ActionDispatch::Session::CookieStore
+
 
   	config.middleware.insert_before 0, "Rack::Cors" do
   	  allow do
