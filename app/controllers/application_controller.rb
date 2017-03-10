@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
     before_action :authenticate_user!, :do_not_set_cookie, if: -> { request.format.json? }
     before_action :configure_permitted_parameters, if: :devise_controller?
 
+    ##http://stackoverflow.com/questions/40854937/new-error-while-upgrading-to-rails-5-nomethoderror-undefined-method-id-for/40872658#40872658
     protect_from_forgery unless: -> { request.format.json? }
 
     protected
