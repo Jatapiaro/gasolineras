@@ -10462,3 +10462,378 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFuelEfficiencyToVehicles (20170319023753)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "fuel_efficiency" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170319023753"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_authentication_tokens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_authentication_tokens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/users/sign_in" for ::1 at 2017-03-18 20:41:55 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (371.0ms)
+Started GET "/vehicles" for ::1 at 2017-03-18 20:41:56 -0600
+Completed 200 OK in 1021ms (Views: 897.6ms | ActiveRecord: 0.5ms)
+
+
+Processing by VehiclesController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-03-18 20:41:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-03-18 20:42:07 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQPFiFdoPgCeowH7v9rR0D7KOspN37fRI461ZchOJuCcOerkOhpTICdIVZTpiwIiQ1iXfDh24yZrrDGYpachKQ==", "user"=>{"email"=>"jatapiaro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jatapiaro@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQPFiFdoPgCeowH7v9rR0D7KOspN37fRI461ZchOJuCcOerkOhpTICdIVZTpiwIiQ1iXfDh24yZrrDGYpachKQ==", "user"=>{"email"=>"jatapiaro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 159ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-03-18 20:42:14 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SkG3kwJnlbMTHo4/R4gxZA2VhUmjazsaFkGW667L8WXve5j/bxX4k6r12lAR2eKWcAco/9bCb+1eYxIWwyL2rA==", "user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SkG3kwJnlbMTHo4/R4gxZA2VhUmjazsaFkGW667L8WXve5j/bxX4k6r12lAR2eKWcAco/9bCb+1eYxIWwyL2rA==", "user"=>{"email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 150ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-03-18 20:42:16 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-03-18 20:42:29 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GhpMI8iS679rBldAw78Mp/Zxc47lWuJIelyfSTVA6fHETRfnGIACvnapQ/jBXhSHgnQDloacr/ByOyjFG0fSYw==", "user"=>{"name"=>"Jacobo", "last_name"=>"Tapia", "second_last_name"=>"de la Rosa", "email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "last_name", "second_last_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "inventado@inventado.com"], ["encrypted_password", "$2a$11$0u33un/.GC0pKZvhX/VML.lnBXmu8irpRWXdiFR1ikusJAmB7RV4C"], ["created_at", 2017-03-19 02:42:29 UTC], ["updated_at", 2017-03-19 02:42:29 UTC], ["name", "Jacobo"], ["last_name", "Tapia"], ["second_last_name", "de la Rosa"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-03-19 02:42:29 UTC], ["last_sign_in_at", 2017-03-19 02:42:29 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-03-19 02:42:29 UTC], ["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 182ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/vehicles" for ::1 at 2017-03-18 20:42:29 -0600
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered vehicles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 25.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vehicles/new" for ::1 at 2017-03-18 20:42:31 -0600
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (39.2ms)
+  Rendered vehicles/new.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 70ms (Views: 59.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-03-18 20:42:32 -0600
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpJP74SAddGm9e4PFGJ9VrLUiwYF04PiRmvFmuqnaDTCR83a3tM6t3hDTiCGWG7OdM+BDJ6uH2jmm/oFIbTajw==", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "fuel_efficiency"=>""}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (4.0ms)
+  Rendered vehicles/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 102ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-03-18 20:42:37 -0600
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DBrrwxdgYL0zzVyByAM9m1KoYbyVPuTAYCA4Wsb+JqapIMSvehINnYomCO6eUu5pLzrMCuCXsDcoArynqxchbw==", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "fuel_efficiency"=>"-23"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (3.4ms)
+  Rendered vehicles/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-03-18 20:42:39 -0600
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6Tq1YSKaokbAFEnuMI/l16hSzX883HFDX9BY/YcG5NmnsW56fgHqaLrBUjuk+xlIzPmg4laJTJFXcWem/UcWg==", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "fuel_efficiency"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (3.5ms)
+  Rendered vehicles/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-03-18 20:42:43 -0600
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bnD+mJAVlWaGy5UTQrlR11NPEWAxs9gT1DcyZQ/GyTPLStH0/Wf4Rj8gwXwU6IIlLt281kQajOScFbaYYi/O+g==", "vehicle"=>{"brand"=>"231", "model"=>"11", "year"=>"11", "fuel_efficiency"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (2.6ms)
+  Rendered vehicles/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-03-18 20:42:51 -0600
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ua0YHkI/Bf2LFyAlN4QNXTAFoCh18fnYerFs9M7eVtP0lzdyL01o3TL8dEph1d6vTZcNngBYrS8yk+gJozdRGg==", "vehicle"=>{"brand"=>"231", "model"=>"Carro", "year"=>"1456", "fuel_efficiency"=>"1"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "vehicles" ("user_id", "brand", "model", "year", "created_at", "updated_at", "fuel_efficiency") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 4], ["brand", "231"], ["model", "Carro"], ["year", 1456], ["created_at", 2017-03-19 02:42:51 UTC], ["updated_at", 2017-03-19 02:42:51 UTC], ["fuel_efficiency", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/vehicles/5
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/vehicles/5" for ::1 at 2017-03-18 20:42:51 -0600
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicles" for ::1 at 2017-03-18 20:42:54 -0600
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered vehicles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login.json" for ::1 at 2017-03-18 20:43:09 -0600
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-03-19 02:43:09 UTC], ["sign_in_count", 2], ["updated_at", 2017-03-19 02:43:09 UTC], ["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT  "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."body" = ? ORDER BY "authentication_tokens"."id" ASC LIMIT ?[0m  [["body", "ac75ec9ac613fb78ebd21ebf868eb25aefdbcc25b94409d388a2bcb3b82fe444"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "authentication_tokens" ("body", "user_id", "last_used_at", "ip_address", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "ac75ec9ac613fb78ebd21ebf868eb25aefdbcc25b94409d388a2bcb3b82fe444"], ["user_id", 4], ["last_used_at", 2017-03-19 02:43:09 UTC], ["ip_address", "::1"], ["user_agent", "PostmanRuntime/3.0.1"], ["created_at", 2017-03-19 02:43:09 UTC], ["updated_at", 2017-03-19 02:43:09 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.6ms)
+Completed 200 OK in 333ms (Views: 12.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-03-18 20:43:26 -0600
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 4]]
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered vehicles/_vehicle.json.jbuilder (0.6ms)
+  Rendered vehicles/index.json.jbuilder (66.1ms)
+Completed 200 OK in 78ms (Views: 72.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/vehicles.json" for ::1 at 2017-03-18 20:43:57 -0600
+Processing by VehiclesController#create as JSON
+  Parameters: {"brand"=>"VWW", "model"=>"Bocho", "year"=>1995, "fuel_efficiency"=>-23, "vehicle"=>{"brand"=>"VWW", "model"=>"Bocho", "year"=>1995, "fuel_efficiency"=>-23}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 7ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/vehicles.json" for ::1 at 2017-03-18 20:44:08 -0600
+Processing by VehiclesController#create as JSON
+  Parameters: {"brand"=>"VWW", "model"=>"Bocho", "year"=>1995, "fuel_efficiency"=>34, "vehicle"=>{"brand"=>"VWW", "model"=>"Bocho", "year"=>1995, "fuel_efficiency"=>34}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "vehicles" ("user_id", "brand", "model", "year", "created_at", "updated_at", "fuel_efficiency") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 4], ["brand", "VWW"], ["model", "Bocho"], ["year", 1995], ["created_at", 2017-03-19 02:44:08 UTC], ["updated_at", 2017-03-19 02:44:08 UTC], ["fuel_efficiency", 34]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (0.4ms)
+  Rendered vehicles/show.json.jbuilder (1.3ms)
+Completed 201 Created in 14ms (Views: 7.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-18 20:44:38 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "authentication_tokens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "last_used_at" datetime, "ip_address" varchar, "user_agent" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_authentication_tokens_on_user_id" ON "authentication_tokens" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "last_name" varchar, "second_last_name" varchar)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "brand" varchar, "model" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "fuel_efficiency" integer)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170319023753)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170309213739),
+(20170309213937),
+(20170309231114),
+(20170310004137);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-19 02:48:48 UTC], ["updated_at", 2017-03-19 02:48:48 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "authentication_tokens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "user_id" integer, "last_used_at" datetime, "ip_address" varchar, "user_agent" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_authentication_tokens_on_user_id" ON "authentication_tokens" ("user_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "last_name" varchar, "second_last_name" varchar)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "brand" varchar, "model" varchar, "year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "fuel_efficiency" integer)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170319023753)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170309213739),
+(20170309213937),
+(20170309231114),
+(20170310004137);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-19 02:48:49 UTC], ["updated_at", 2017-03-19 02:48:49 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
