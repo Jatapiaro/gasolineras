@@ -1,0 +1,37 @@
+es:
+  activerecord:
+    models:
+      authentication_token: Token de autenticación  #g
+      user: Usuario  #g
+      vehicle: Vehículo  #g
+
+    attributes:
+      authentication_token:
+        body: Cuerpo  #g
+        ip_address: Dirección IP  #g
+        last_used_at: Último uso en  #g
+        user: :activerecord.models.user  #g
+        user_agent: Agente de usuario  #g
+
+      user:
+        authentication_tokens: Señales de autenticación  #g
+        current_sign_in_at: Inicio de sesión actual en  #g
+        current_sign_in_ip: Conexión actual ip  #g
+        email: Email  #g
+        encrypted_password: Contraseña cifrada  #g
+        last_name: Apellido  #g
+        last_sign_in_at: Último acceso  #g
+        last_sign_in_ip: Último signo ip  #g
+        name: Nombre  #g
+        remember_created_at: Recuerda creado en  #g
+        reset_password_sent_at: Restablecer contraseña enviada a  #g
+        reset_password_token: Restablecer contraseña de contraseña  #g
+        second_last_name: Segundo apellido  #g
+        vehicles: Vehículos  #g
+
+      vehicle:
+        brand: Marca  #g
+        fuel_efficiency: Eficiencia de combustible  #g
+        model: Modelo  #g
+        user: :activerecord.models.user  #g
+        year: Año  #g
