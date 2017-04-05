@@ -45,6 +45,11 @@ gem 'active_model_serializers'
 
 gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
 
+gem 'activeresource', github: 'rails/activeresource', branch: 'master'
+gem 'geocoder'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/rails/activeresource.git
+  revision: e28f907145c34bcad1d354fa9b25fbd4264e52e9
+  branch: master
+  specs:
+    activeresource (5.0.0)
+      activemodel (> 4.2, < 6)
+      activemodel-serializers-xml (~> 1.0)
+      activesupport (> 4.2, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -34,6 +44,11 @@ GEM
       globalid (>= 0.3.6)
     activemodel (5.0.2)
       activesupport (= 5.0.2)
+    activemodel-serializers-xml (1.0.1)
+      activemodel (> 5.x)
+      activerecord (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (5.0.2)
       activemodel (= 5.0.2)
       activesupport (= 5.0.2)
@@ -67,6 +82,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.1)
@@ -187,9 +203,11 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  activeresource!
   byebug
   coffee-rails (~> 4.2)
   devise
+  geocoder
   i18n_generators (~> 2.1, >= 2.1.1)
   jbuilder (~> 2.5)
   jquery-rails
