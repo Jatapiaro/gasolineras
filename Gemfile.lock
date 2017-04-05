@@ -85,6 +85,8 @@ GEM
     geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.8.1)
     i18n_generators (2.1.1)
       rails (>= 3.0.0)
@@ -110,6 +112,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     nio4r (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -208,6 +211,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   geocoder
+  httparty
   i18n_generators (~> 2.1, >= 2.1.1)
   jbuilder (~> 2.5)
   jquery-rails

@@ -47,6 +47,7 @@ gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
 
 gem 'activeresource', github: 'rails/activeresource', branch: 'master'
 gem 'geocoder'
+gem 'httparty'
 
 
 
