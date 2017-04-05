@@ -9,7 +9,6 @@ class WelcomeController < ApplicationController
 
 		@lat
 		@long
-
 		##Hardcoding my ip
 		if Rails.env.development?
 			@lat = '19.2564776'
@@ -19,9 +18,13 @@ class WelcomeController < ApplicationController
 	  		@long = request.location.longitude.to_s
 	  	end
 
+	  	stations = Array.new
+
 	  	var = HTTParty.get(url+"/"+key+"/"+@lat+"/"+@long)
-	  	da = var.parsed_response["gasolineras"]
-	  	Rails.logger.debug("Usuario: "+da.to_s)
+	  	data = var.parsed_response["gasolineras"]
+	  	data.each { |x| stations.push(Station.new(x))}
+	  	##
+	  	Rails.logger.debug("Usuario: "+stations[0].to_s)
 	end
 
 end

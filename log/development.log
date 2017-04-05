@@ -12962,3 +12962,302 @@ Usuario: [{"direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo
 Completed 200 OK in 1946ms (Views: 15.4ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/vehicles" for ::1 at 2017-04-05 03:32:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VehiclesController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-05 03:32:26 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 167ms (Views: 157.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-05 03:32:29 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2513ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/welcome_controller.rb:23:in `[]'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+Started GET "/" for ::1 at 2017-04-05 03:33:38 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2134ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/welcome_controller.rb:23:in `[]'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.7ms)
+Started GET "/" for ::1 at 2017-04-05 03:33:41 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2274ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/welcome_controller.rb:23:in `[]'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+Started GET "/" for ::1 at 2017-04-05 03:37:01 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2429ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (superclass must be a Class (Module given)):
+  
+app/models/station.rb:1:in `<top (required)>'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+Started GET "/" for ::1 at 2017-04-05 03:38:25 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 3719ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+Started GET "/" for ::1 at 2017-04-05 03:38:52 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2175ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of HTTParty::Response into String):
+  
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.3ms)
+Started GET "/" for ::1 at 2017-04-05 03:38:56 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 1850ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of HTTParty::Response into String):
+  
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.5ms)
+Started GET "/" for ::1 at 2017-04-05 03:39:09 -0500
+Processing by WelcomeController#index as HTML
+Usuario: [{"direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "longitud"=>" -99.021512", "id"=>"E10558"}, {"direccion"=>"Francisco I. Madero No. 369, Col. Santiago Tulyehualco, C.P. 16740, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.5740", "nombre"=>"Servicio Tulyehualco, S.A. de C.V.", "latitud"=>"  19.257516", "longitud"=>" -99.023770", "id"=>"E11001"}, {"direccion"=>"Av. Tlahuac # 8308, Col. Barrio Los Reyes, C.P. 13080, Tlahuac, Ciudad de México", "distancia"=>"1.5630", "nombre"=>"Servicio Javier Meza, SA de CV", "latitud"=>"  19.265046", "longitud"=>" -99.006616", "id"=>"E00149"}, {"direccion"=>"Av. Tlahuac No. 7081, Col. San Francisco Tlaltenco, C.P. 13450, Miguel Hidalgo, Ciudad de México", "distancia"=>"5.7150", "nombre"=>"Gasolineria Miramontes,  S.A. de C.V.", "latitud"=>"  19.299980", "longitud"=>" -99.047410", "id"=>"E12528"}, {"direccion"=>"Av. Tlahuac No. 5927, Col. Ex Hda. San Nicolas Tolentino Buenavista, C.P. 5990, Tlahuac, Ciudad de México", "distancia"=>"5.92", "nombre"=>"Estefania Perez Ruiz", "latitud"=>"  19.300336", "longitud"=>" -99.050399", "id"=>"E05084"}, {"direccion"=>"Blvd. Jose Lopez Portillo # 657-B, Col. San Francisco Tecoxpa, C.P. 12700, Milpa Alta, Ciudad de México", "distancia"=>"6.14", "nombre"=>"Inmobiliaria Milloalto,S.A. de C.V.", "latitud"=>"  19.202430", "longitud"=>" -99.006437", "id"=>"E06076"}, {"direccion"=>"Blvd. Nuevo Leon No. 167, Col. Villa Milpa Alta, C.P. 12000, Milpa Alta, Ciudad de México", "distancia"=>"6.6760", "nombre"=>"Olesma, S.A. de C.V.", "latitud"=>"  19.196447", "longitud"=>" -99.017437", "id"=>"E00251"}, {"direccion"=>"Av. Cuauhtemoc Mz.167,Lt.33,No.1, Col. San Miguel Xico Iv Seccion, C.P. 56613, Chalco, Estado de México", "distancia"=>"6.7150", "nombre"=>"Servicio Bringom, S.A. de C.V.", "latitud"=>"  19.262520", "longitud"=>" -98.954770", "id"=>"E12743"}, {"direccion"=>"Av. Tlahuac No.5243, Col. Granjas Cabrera, C.P. 13210, Xochimilco, Ciudad de México", "distancia"=>"7.1450", "nombre"=>"Servicio Cipreses S.A de C.V.", "latitud"=>"  19.305090", "longitud"=>" -99.062938", "id"=>"E08231"}, {"direccion"=>"Av. Francisco Sarabia # 3, Col. San Martin Xico la Laguna, C.P. 56614, Chalco, Estado de México", "distancia"=>"7.6780", "nombre"=>"Grupo Combumeza, S.A. de C.V.", "latitud"=>"  19.253960", "longitud"=>" -98.945330", "id"=>"E12987"}, {"direccion"=>"Norte 7 No. 146, Col. Maria Isabel, C.P. 56615, Chalco, Estado de México", "distancia"=>"8.1050", "nombre"=>"Servicio Jusla Valle de Chalco, S.A. de C.V.", "latitud"=>"  19.291023", "longitud"=>" -98.950428", "id"=>"E10583"}, {"direccion"=>"Eje 10 Sur   No. 2, Col. Santa Catarina, C.P. 13100, Toluca, Estado de México", "distancia"=>"8.1080", "nombre"=>"Servicio Sobredo, S.A. de C.V.", "latitud"=>"  19.308041", "longitud"=>" -98.963803", "id"=>"E07196"}, {"direccion"=>"Calz Xochimilco-Tulyehualco Esq Ciclamen_No. 58, Col. Xaltocan, C.P. 16090, Xochimilco, Ciudad de México", "distancia"=>"8.1510", "nombre"=>"Ernesto Aguilar Cordero (Su Sucesion)", "latitud"=>"  19.250650", "longitud"=>" -99.095820", "id"=>"E03100"}, {"direccion"=>"Av.Cuauhtemoc Esq.Sebastian Lerdo de Tejada N0.468, Col. Concepcion, C.P. 56615, Chalco, Estado de México", "distancia"=>"8.2410", "nombre"=>"Servicio Hefeso, S.A. de C.V.", "latitud"=>"  19.292610", "longitud"=>" -98.949870", "id"=>"E12431"}, {"direccion"=>"Eje 10 Sur No. 2, Mz 39 Lote 1, Col. Ampliacion Santa Catarina, C.P. 56619, Chalco, Estado de México", "distancia"=>"8.4350", "nombre"=>"Estacion 10 Sur, S.A. de C.V.", "latitud"=>"  19.311868", "longitud"=>" -98.963502", "id"=>"E11986"}, {"direccion"=>"Av. Tlahuac No. 1742 Esq. Sta. Catarina, Col. San Lorenzo Tezonco, C.P. 0, Iztapalapa, Ciudad de México", "distancia"=>"8.4770", "nombre"=>"Servicio Tulcingo, S.A. de C.V.", "latitud"=>"  19.314669", "longitud"=>" -99.070593", "id"=>"E05174"}, {"direccion"=>"Av. Alfredo Del Mazo 208 A-Lote 04 Mza.361, Col. Santa Cruz, C.P. 56617, Chalco, Estado de México", "distancia"=>"8.7420", "nombre"=>"Servicio Villamanin S.A. de C.V.", "latitud"=>"  19.285731", "longitud"=>" -98.941109", "id"=>"E08077"}, {"direccion"=>"Av. Tezozomoc Esq. Av. Adolfo Lopez Mateos, Col. ., C.P. 56600, Acolman, Estado de México", "distancia"=>"8.9940", "nombre"=>"Gasolineria la Hacienda de Xico, S.A. de C.V.", "latitud"=>"  19.276024", "longitud"=>" -98.935274", "id"=>"E04988"}, {"direccion"=>"Fraccion Sur Lote 1, Manz.3,981 Zona 11, Col. Santiago, C.P. 56600, Chalco, Estado de México", "distancia"=>"9.5180", "nombre"=>"Estefania Perez Ruiz", "latitud"=>"  19.298834", "longitud"=>" -98.939622", "id"=>"E04506"}, {"direccion"=>"Calz. San Lorenzo Tezonco No 1147 Esq.Reforma, Col. San Nicolas Tolentino, C.P. 9850, Iztapalapa, Ciudad de México", "distancia"=>"9.5360", "nombre"=>"San Lorenzo Tezonco, S.A. de C.V.", "latitud"=>"  19.322800", "longitud"=>" -99.076020", "id"=>"E03381"}, {"direccion"=>"Av. Manuel de la Peña No. 148, Col. Dario Martinez 1ra. Seccion, C.P. 0, Chalco, Estado de México", "distancia"=>"9.5460", "nombre"=>"Operadora de Estaciones de Servicio 20-20, S.A. de C.V.", "latitud"=>"  19.310273", "longitud"=>" -98.947534", "id"=>"E05096"}, {"direccion"=>"Sebastian Lerdo de Tejada # 81 y 83, Col. Dario Martinez 1ra Seccion, C.P. 56639, Chalco, Estado de México", "distancia"=>"9.7470", "nombre"=>"Grupo Autopista,S.A. de C.V.", "latitud"=>"  19.315879", "longitud"=>" -98.950119", "id"=>"E06034"}, {"direccion"=>"Periferico Sur No. 7685, Col. Granjas Rinconada Coapa, C.P. 16060, Miguel Hidalgo, Ciudad de México", "distancia"=>"9.7870", "nombre"=>"Servicio Cuexoch S.A.de C.V", "latitud"=>"  19.293992", "longitud"=>" -99.102773", "id"=>"E11437"}, {"direccion"=>"Tolentino No. 10, Col. Casa Blanca, C.P. 9860, Iztapalapa, Ciudad de México", "distancia"=>"9.7960", "nombre"=>"Super Servicio Diamante, SA de CV", "latitud"=>"  19.333336", "longitud"=>" -99.064033", "id"=>"E04717"}, {"direccion"=>"Calz.Ermita Iztapalapa Nos. 3048, Col. Santa Cruz Meyehualco, C.P. 9700, Iztapalapa, Ciudad de México", "distancia"=>"9.8170", "nombre"=>"Operadora de Estaciones de Servicio 20-20, S.A. de C.V.", "latitud"=>"  19.343632", "longitud"=>" -99.033346", "id"=>"E02788"}, {"direccion"=>"Autopista Puebla-Mexico Km 22+500, Col. Exhacienda San Isidro, C.P. 56617, Chalco, Estado de México", "distancia"=>"9.8450", "nombre"=>"Operadora Salo S.A. de C.V.", "latitud"=>"  19.325380", "longitud"=>" -98.959517", "id"=>"E08146"}, {"direccion"=>"Calz.Ermita Iztapalapa No.2710,Esq.Emiliano Zapata, Col. Santa Cruz Meyehualco, C.P. 9700, Iztapalapa, Ciudad de México", "distancia"=>"9.85", "nombre"=>"Operadora de Estaciones de Servicio 20-20, S.A. de C.V.", "latitud"=>"  19.343194", "longitud"=>" -99.037580", "id"=>"E03990"}, {"direccion"=>"Calz. Ermita Iztapalapa No. 3389, Col. Santa Maria Aztahuacan, C.P. 9500, Iztapalapa, Ciudad de México", "distancia"=>"9.97", "nombre"=>"Corporacion Gasolinera Millenium, S.A. de C.V.", "latitud"=>"  19.346134", "longitud"=>" -99.019429", "id"=>"E05304"}, {"direccion"=>"Emiliano Zapata No.146 Manzana 555, Lote 08, Col. San Isidro, C.P. 56613, Chalco, Estado de México", "distancia"=>"10.0930", "nombre"=>"Servicio Gorm, S.A. de C.V.", "latitud"=>"  19.293087", "longitud"=>" -98.930426", "id"=>"E11661"}, {"direccion"=>"Calle Benito Juarez No. 1, Col. Presidentes de Mexico, C.P. 9700, Iztapalapa, Ciudad de México", "distancia"=>"10.2710", "nombre"=>"Servicio Garay, SA de CV", "latitud"=>"  19.337822", "longitud"=>" -99.064782", "id"=>"E05139"}]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2180ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-05 03:39:27 -0500
+Processing by WelcomeController#index as HTML
+Usuario: {"direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "longitud"=>" -99.021512", "id"=>"E10558"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2726ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-05 03:40:27 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 3080ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/welcome_controller.rb:23:in `block in index'
+app/controllers/welcome_controller.rb:23:in `each'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+Started GET "/" for ::1 at 2017-04-05 03:42:19 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2987ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `Station' for #<WelcomeController:0x007f824cbdb250>
+Did you mean?  status):
+  
+app/controllers/welcome_controller.rb:23:in `block in index'
+app/controllers/welcome_controller.rb:23:in `each'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.5ms)
+Started GET "/" for ::1 at 2017-04-05 03:42:46 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2358ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/welcome_controller.rb:23:in `initialize'
+app/controllers/welcome_controller.rb:23:in `new'
+app/controllers/welcome_controller.rb:23:in `block in index'
+app/controllers/welcome_controller.rb:23:in `each'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.1ms)
+Started GET "/" for ::1 at 2017-04-05 03:43:59 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2809ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `direccion=' for #<Station:0x007f824c47e048>
+Did you mean?  direccion):
+  
+app/models/station.rb:7:in `public_send'
+app/models/station.rb:7:in `block in initialize'
+app/models/station.rb:7:in `each'
+app/models/station.rb:7:in `initialize'
+app/controllers/welcome_controller.rb:23:in `new'
+app/controllers/welcome_controller.rb:23:in `block in index'
+app/controllers/welcome_controller.rb:23:in `each'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+Started GET "/" for ::1 at 2017-04-05 03:46:38 -0500
+Processing by WelcomeController#index as HTML
+Usuario: {"direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "longitud"=>" -99.021512", "id"=>"E10558"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2598ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2017-04-05 03:47:49 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 2038ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `define_attribute_methods' for Station:Class
+Did you mean?  define_method):
+  
+app/models/station.rb:4:in `<class:Station>'
+app/models/station.rb:1:in `<top (required)>'
+app/controllers/welcome_controller.rb:23:in `block in index'
+app/controllers/welcome_controller.rb:23:in `each'
+app/controllers/welcome_controller.rb:23:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+Started GET "/" for ::1 at 2017-04-05 03:50:01 -0500
+Processing by WelcomeController#index as HTML
+Usuario: {"direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "longitud"=>" -99.021512", "id"=>"E10558"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2907ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-05 03:50:13 -0500
+Processing by WelcomeController#index as HTML
+Usuario: #<Station:0x007f824c2d0700>
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2365ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
