@@ -50,7 +50,6 @@ gem 'geocoder'
 gem 'httparty'
 gem 'gmaps4rails'
 gem 'materialize-sass'
-gem 'material_icons'
 
 
 
