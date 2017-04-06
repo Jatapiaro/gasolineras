@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Vehicles</h1>
+<h1>Vehículos</h1>
 
 <table>
   <thead>
@@ -22,7 +22,7 @@
         <td><%= vehicle.year %></td>
         <td><%= link_to 'Show', vehicle %></td>
         <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Vehicle', new_vehicle_path %>
+<%= link_to 'Nuevo vehículo', new_vehicle_path %>
