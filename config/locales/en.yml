@@ -139,9 +139,6 @@ en:
         one: tamaño incorrecto (debe ser de 1 caracter)
         other: tamaño incorrecto (debe ser de %{count} caracteres)
       other_than: debe ser diferente de %{count}
-      not_saved:
-        one: "1 puto %{model} from being saved:"
-        other: "%{count} errors  puto is %{model} from being saved:"
     template:
       body: 'Hay un problema con los siguientes campos:'
       header:
