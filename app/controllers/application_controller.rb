@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
     # Do not generate a session or session ID cookie
     # See https://github.com/rack/rack/blob/master/lib/rack/session/abstract/id.rb#L171
     def do_not_set_cookie
-      puts "Estoy eliminando o saltandome las cookies"
       reset_session
     end
     

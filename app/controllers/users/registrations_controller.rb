@@ -8,4 +8,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       super
     end
 
+    def update
+    	super
+    end
+
 end
