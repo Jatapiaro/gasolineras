@@ -17889,3 +17889,165 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/vehicles" for ::1 at 2017-04-07 00:36:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VehiclesController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:36:56 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (15.7ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 327ms (Views: 316.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:37:15 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:37:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:37:19 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-04-07 00:37:22 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PID7simGOJD5rfLj0BlJYmU1bydahsPpHpJZoBCeMrWTu60NgyXrKlZcWlrDrcwwNwKwCBlDwaQ76pmiTfzCmA==", "user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 135ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PID7simGOJD5rfLj0BlJYmU1bydahsPpHpJZoBCeMrWTu60NgyXrKlZcWlrDrcwwNwKwCBlDwaQ76pmiTfzCmA==", "user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 215ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-04-07 00:37:28 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PI6zOfHnb2wQ97josvvew0EGoPqwJ13JunA/+FFFOaqTteWGW0S81r8GEFGhT1uREzF/1fPiX4SfCP/6DCfJhw==", "user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-04-07 05:37:28 UTC], ["updated_at", 2017-04-07 05:37:28 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 7], ["current_sign_in_at", 2017-04-07 05:37:28 UTC], ["last_sign_in_at", 2017-04-07 05:09:43 UTC], ["updated_at", 2017-04-07 05:37:28 UTC], ["id", 1]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/vehicles
+Completed 302 Found in 180ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/vehicles" for ::1 at 2017-04-07 00:37:28 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (20.4ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 182ms (Views: 120.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vehicles" for ::1 at 2017-04-07 00:37:54 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 96ms (Views: 92.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-04-07 00:37:56 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (4.0ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 161ms (Views: 159.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/users" for ::1 at 2017-04-07 00:38:09 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wdkt5B2/lOgHf2GtK71fvlQ0Y9vL9hik2wIk90FowRTJcI73bNUQvRAYKaehYuDjo+o9MSjAH1Dpx+JNEVa8IA==", "user"=>{"name"=>"Jacobo Misael", "last_name"=>"Tapia", "second_last_name"=>"de la Rosa", "email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (4.0ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 346ms (Views: 92.1ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/users" for ::1 at 2017-04-07 00:38:21 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W0tpRfG0wyMa8s0LqbAFd3un82p8VzEHbZF2PfFMYtzfQN3XnmaeGvGlJKsFL+kaxQyxLBkfTJKYFc+ZbaddOw==", "user"=>{"name"=>"Jacobo Misael", "last_name"=>"Tapia", "second_last_name"=>"de la Rosa", "email"=>"inventado@inventado.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = ?, "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["encrypted_password", "$2a$11$rI3Y9q7FcTQq3MoZYFzOtOgndSjI0j1le6qoAPdEBjzO7EyhJhbkO"], ["name", "Jacobo Misael"], ["updated_at", 2017-04-07 05:38:21 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:38:21 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "longitud"=>" -99.021512", "id"=>"E10558", "latitud"=>"  19.257518"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 2244ms (Views: 94.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:40:00 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "longitud"=>" -99.021512", "id"=>"E10558", "latitud"=>"  19.257518"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 2443ms (Views: 103.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:41:32 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "longitud"=>" -99.021512", "id"=>"E10558", "latitud"=>"  19.257518"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 3014ms (Views: 93.6ms | ActiveRecord: 0.9ms)
+
+

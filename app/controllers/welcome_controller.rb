@@ -22,19 +22,27 @@ class WelcomeController < ApplicationController
 
 		  	var = HTTParty.get(url+"/"+key+"/"+@lat+"/"+@long)
 		  	data = var.parsed_response["gasolineras"]
-		  	##tu = Station.new()
-		  	##@stations.push(tu)
+		  	tu = Station.new({"nombre"=>"Tu ubicación", "direccion"=>"", "distancia"=>"0.0", "longitud"=>@long, "id"=>"-1", "latitud"=>@lat})
+		  	@stations.push(tu)
 		  	data.each { |x| @stations.push(Station.new(x))}
 
 		  	@hash = Gmaps4rails.build_markers(@stations) do |s, marker|
 	 			marker.lat s.latitud
 	  			marker.lng s.longitud
 	  			marker.title s.nombre
-	  			marker.picture ({
-    				url: "http://maps.google.com/mapfiles/kml/pal2/icon21.png",
-				    width: 32,
-				    height: 32,
-				})
+	  			if s.id == '-1'
+	  				marker.picture ({
+	  				    url: "http://maps.google.com/mapfiles/ms/micons/man.png",
+	  					width: 32,
+	  					height: 32,
+	  				})	
+	  			else
+	  				marker.picture ({
+	  				    url: "http://maps.google.com/mapfiles/kml/pal2/icon21.png",
+	  					width: 32,
+	  					height: 32,
+	  				})	  				
+	  			end
 			end
 			Rails.logger.debug("Usuario: "+data[0].to_s)			
 		end
