@@ -5,6 +5,7 @@
 <% if user_signed_in? %>
 	<h1>Bienvenido <%= current_user.name %></h1>
 	<div style='width: 800px;'>
+		<h4>Gasolineras cercanas</h4>
 	  <div id="map" style='width: 800px; height: 400px;'></div>
 	</div>
 <% else %>
@@ -20,5 +21,5 @@
 	  handler.bounds.extendWith(markers);
 	  handler.fitMapToBounds();
 	});
-</script>
+</script>å
 
