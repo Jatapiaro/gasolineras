@@ -22,12 +22,8 @@ class WelcomeController < ApplicationController
 
 		  	var = HTTParty.get(url+"/"+key+"/"+@lat+"/"+@long)
 		  	data = var.parsed_response["gasolineras"]
-		  	tu = Station.new()
-		  	tu.id = '-1'
-		  	tu.longitud = @long
-		  	tu.latitud = @lat
-		  	tu.nombre = "Tu ubicación"
-		  	@stations.push(tu)
+		  	##tu = Station.new()
+		  	##@stations.push(tu)
 		  	data.each { |x| @stations.push(Station.new(x))}
 
 		  	@hash = Gmaps4rails.build_markers(@stations) do |s, marker|
