@@ -18214,3 +18214,145 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 2234ms (Views: 92.3ms | ActiveRecord: 0.3ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2017-04-07 01:27:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 2603ms (Views: 307.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicles" for ::1 at 2017-04-07 01:27:38 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (23.8ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 176ms (Views: 112.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/vehicles" for ::1 at 2017-04-07 01:27:38 -0500
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (2.1ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 85.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicles/new" for ::1 at 2017-04-07 01:27:41 -0500
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (51.9ms)
+  Rendered vehicles/new.html.erb within layouts/application (72.4ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 186ms (Views: 181.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-04-07 01:27:43 -0500
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AKRJLjs2ARyZdx43pAIWYG+8FV9/eORPvAhAMxdb8/zAta01E4Ewr6ui7e4nz3NEOFbb0JfscjOH97UTTLmZVA==", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "fuel_efficiency"=>""}, "commit"=>"Crear Vehículo"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (2.9ms)
+  Rendered vehicles/new.html.erb within layouts/application (4.4ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 91.4ms | ActiveRecord: 0.2ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/vehicles" for ::1 at 2017-04-07 01:28:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (13.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 382ms (Views: 338.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vehicles/new" for ::1 at 2017-04-07 01:28:32 -0500
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (18.8ms)
+  Rendered vehicles/new.html.erb within layouts/application (20.2ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 108.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-04-07 01:28:33 -0500
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ZWpZMlzHSBSKppFt4Q7pFmPEmiVVa38KcIkqJkIDUohhE1/4cQsk2D/aZw0SV6ADmXc533BO4ASPdGIwupn4g==", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "fuel_efficiency"=>""}, "commit"=>"Crear Vehículo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (2.9ms)
+  Rendered vehicles/new.html.erb within layouts/application (4.3ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 97ms (Views: 89.9ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/vehicles" for ::1 at 2017-04-07 01:31:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (13.5ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 366ms (Views: 321.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/vehicles/new" for ::1 at 2017-04-07 01:31:46 -0500
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (19.4ms)
+  Rendered vehicles/new.html.erb within layouts/application (20.9ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 114ms (Views: 110.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/vehicles" for ::1 at 2017-04-07 01:31:47 -0500
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8rPP2Cgk85he/BcaDGDSdBruZIspDHaolD77hrt5sMQyoivDAJPCK2wp5MOPrbdQTQSqBMGY4NSvwQ6m4JvabA==", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "fuel_efficiency"=>""}, "commit"=>"Crear Vehículo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (3.6ms)
+  Rendered vehicles/new.html.erb within layouts/application (5.1ms)
+  Rendered partials/_nav.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 86.0ms | ActiveRecord: 0.4ms)
+
+
