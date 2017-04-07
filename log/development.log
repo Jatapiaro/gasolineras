@@ -18051,3 +18051,140 @@ Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "direccion"=>"Aquiles 
 Completed 200 OK in 3014ms (Views: 93.6ms | ActiveRecord: 0.9ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/" for ::1 at 2017-04-07 01:16:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 12675ms (Views: 482.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 01:18:06 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3053ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `ditancia' for #<Station:0x007f9310254db0>
+Did you mean?  distancia
+               distancia=):
+  
+app/controllers/welcome_controller.rb:46:in `block in index'
+app/controllers/welcome_controller.rb:30:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.8ms)
+Started GET "/" for ::1 at 2017-04-07 01:18:33 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1828ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `window' for #<Gmaps4rails::MarkersBuilder::MarkerBuilder:0x007f930e381618>):
+  
+app/controllers/welcome_controller.rb:46:in `block in index'
+app/controllers/welcome_controller.rb:30:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+Started GET "/" for ::1 at 2017-04-07 01:18:39 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2337ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `window' for #<Gmaps4rails::MarkersBuilder::MarkerBuilder:0x007f9312912da8>):
+  
+app/controllers/welcome_controller.rb:46:in `block in index'
+app/controllers/welcome_controller.rb:30:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.0ms)
+Started GET "/" for ::1 at 2017-04-07 01:19:16 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 3182ms (Views: 90.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 01:19:44 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 2452ms (Views: 83.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 01:20:45 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 2657ms (Views: 95.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 01:21:01 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 2277ms (Views: 89.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 01:21:24 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (8.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 2174ms (Views: 102.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 01:21:46 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "latitud"=>"  19.257518", "id"=>"E10558", "longitud"=>" -99.021512", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 2428ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+

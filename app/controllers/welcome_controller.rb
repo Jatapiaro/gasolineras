@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
 
 		@lat
 		@long
+
 		if user_signed_in?
 			##Hardcoding my ip
 			if Rails.env.development?
@@ -41,13 +42,13 @@ class WelcomeController < ApplicationController
 	  				    url: "http://maps.google.com/mapfiles/kml/pal2/icon21.png",
 	  					width: 32,
 	  					height: 32,
-	  				})	  				
+	  				}) 
+	  				marker.infowindow  s.direccion + " A "+s.distancia+" km de distancia"				
 	  			end
 			end
-			Rails.logger.debug("Usuario: "+data[0].to_s)			
+			##Rails.logger.debug("Usuario: "+data[0].to_s)			
 		end
 	end
-
 
 
 end
