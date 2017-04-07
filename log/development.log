@@ -17379,3 +17379,513 @@ Processing by Users::SessionsController#destroy as JSON
 Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/vehicles" for ::1 at 2017-04-07 00:15:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VehiclesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/index.html.erb within layouts/application (37.3ms)
+  Rendered partials/_nav.html.erb (1.4ms)
+Completed 200 OK in 530ms (Views: 450.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-04-07 00:15:18 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UiJcuJFElyp8RQJNY1tFf7sahzP2K5Zt/40MfmTtVN+jAJhg0kXZL2csFIYIBYmALPySr6PJtzW+QtKa1BXf1A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-04-07 05:15:18 UTC], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 157ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:15:18 -0500
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/welcome_controller.rb:40:in `index'
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jacobotapia/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.3ms)
+Started GET "/" for ::1 at 2017-04-07 00:15:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:15:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (246.0ms)
+  Rendered partials/_nav.html.erb (1.4ms)
+Completed 200 OK in 553ms (Views: 543.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:15:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-04-07 00:15:50 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/passwords/new.html.erb within layouts/application (3.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 113ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-04-07 00:15:54 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QW5XrwOWKvZTD5EE0DUUHOteejOFuaIxFqYDB/9M6zFRDy7vwGC3/kcOaBIPbSqA38djE/hKYfCbpxbs3Ya4ZA==", "user"=>{"email"=>"jatapiaro@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jatapiaro@gmail.com"], ["LIMIT", 1]]
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/passwords/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 131ms (Views: 120.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-04-07 00:16:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 107ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-04-07 00:16:28 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lFyXWgdmIdZAYOEfVYREhXf/L0eIm/+/ZRRKQo8zxHhwcEZ2+yZSZ5boqFWp4tLMgXbRFJFkw1g1Z9shcGKm+w==", "user"=>{"name"=>"Jacobo", "last_name"=>"Misael", "second_last_name"=>"Tapia", "email"=>"jacob.et.cetera@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "last_name", "second_last_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jacob.et.cetera@gmail.com"], ["encrypted_password", "$2a$11$WrderS4emIZ4LIvv2GzHeOXWdevmWRAD/P8ouHrwu5iBGp1BRNCsu"], ["created_at", 2017-04-07 05:16:28 UTC], ["updated_at", 2017-04-07 05:16:28 UTC], ["name", "Jacobo"], ["last_name", "Misael"], ["second_last_name", "Tapia"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-04-07 05:16:28 UTC], ["last_sign_in_at", 2017-04-07 05:16:28 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-04-07 05:16:28 UTC], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 176ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:16:28 -0500
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "direccion"=>"Aquiles Serdan No. 238, Col. Barrio la Guadalupita Pblo.Stgo Tuly, C.P. 16700, Miguel Hidalgo, Ciudad de México", "distancia"=>"0.3450", "longitud"=>" -99.021512", "id"=>"E10558", "latitud"=>"  19.257518"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 2869ms (Views: 90.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-04-07 00:16:34 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5CcA0YJV2+om6DfH21IHmg7Xkqfln9MSFF1DY0GV9tJHvkXdUSE/eKvk/7ILkdQcYIgnWf8WyvayfrhnI8LwcQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-07 00:16:34 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:16:36 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 100ms (Views: 98.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:16:36 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.9ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-04-07 00:16:38 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/passwords/new.html.erb within layouts/application (4.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 136ms (Views: 133.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-04-07 00:16:41 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ThoGlbdYXXB2mrJEVIQy7eCLWnbyZ8V9FGbnM/X4d9vZBw2z9KjwomLAynG8KknE1UGuSKyRaenOxrGxgST0oQ==", "user"=>{"email"=>"jacob.et.cetera@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "5d09185f3c8b9789236f3cafcb0011e6a220bbc919828ac8fe032b41244a4d7f"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "5d09185f3c8b9789236f3cafcb0011e6a220bbc919828ac8fe032b41244a4d7f"], ["reset_password_sent_at", 2017-04-07 05:16:41 UTC], ["updated_at", 2017-04-07 05:16:41 UTC], ["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.7ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 176.7ms
+Sent mail to jacob.et.cetera@gmail.com (32.0ms)
+Date: Fri, 07 Apr 2017 00:16:41 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jacob.et.cetera@gmail.com
+Message-ID: <58e720b9e2893_13bc3ff6318a795834368@iMac-de-Jacobo.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello jacob.et.cetera@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=onVbgSqE4PqHkH2CN16j">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 886ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:16:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 90ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-04-07 00:17:59 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/passwords/new.html.erb within layouts/application (5.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-04-07 00:18:02 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgbA+EN6/nlIql25aMBjtgM6yuGVgOJ0oQAtS4dy2m6lG8veAIpTq1zwJYyAbhifNvA+38t2TuB7oHvJ865ZFA==", "user"=>{"email"=>"jacob.et.cetera@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "259b5c48c6ac4ed27e576303333ed8de69f6de24110cab8cc828e60f629bb29b"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "259b5c48c6ac4ed27e576303333ed8de69f6de24110cab8cc828e60f629bb29b"], ["reset_password_sent_at", 2017-04-07 05:18:02 UTC], ["updated_at", 2017-04-07 05:18:02 UTC], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.8ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 15.7ms
+Sent mail to jacob.et.cetera@gmail.com (2.5ms)
+Date: Fri, 07 Apr 2017 00:18:02 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jacob.et.cetera@gmail.com
+Message-ID: <58e7210a96dcf_13bc3ff6318a7ae834428@iMac-de-Jacobo.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello jacob.et.cetera@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=4NLw5UWCyC6Bcb4kbzTc">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 31ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:18:02 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:18:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-04-07 00:18:50 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/passwords/new.html.erb within layouts/application (3.6ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 110ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-04-07 00:18:53 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk+Oki4Pi7uaC+qfAFzx6qDrHB4DmwyAbHPaEcx1rY09UoW0bf8maY5Rkqro8orDlSHoIF1toBS204yTuKku9w==", "user"=>{"email"=>"jacob.et.cetera@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "c763825ad981f9966e4cd5555ef45c461a373b8a74f98eddc552cbcf356d8d08"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "c763825ad981f9966e4cd5555ef45c461a373b8a74f98eddc552cbcf356d8d08"], ["reset_password_sent_at", 2017-04-07 05:18:53 UTC], ["updated_at", 2017-04-07 05:18:53 UTC], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.5ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 15.3ms
+Sent mail to jacob.et.cetera@gmail.com (2.8ms)
+Date: Fri, 07 Apr 2017 00:18:53 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jacob.et.cetera@gmail.com
+Message-ID: <58e7213d96832_13bc3ff6318a7958345c7@iMac-de-Jacobo.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello jacob.et.cetera@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=RxiLwnPQHieP5ZkJfygv">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 32ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:18:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:19:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_authentication_tokens_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_authentication_tokens_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:21:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (26.3ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 381ms (Views: 350.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-04-07 00:21:19 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/passwords/new.html.erb within layouts/application (3.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-04-07 00:21:22 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UUm7HW3fAqL087ES38Wl2IOT9uAYRdUK3UmqSF908IrGVLA7Li+vcOCpySc3a97xtlkC3kazeZ4H6fzKK6hz8A==", "user"=>{"email"=>"jacob.et.cetera@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "9af2c1b14580ca7eaed31dad0b98059c4ef04b6edf335085ac48dc4bd3f5b0bf"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "9af2c1b14580ca7eaed31dad0b98059c4ef04b6edf335085ac48dc4bd3f5b0bf"], ["reset_password_sent_at", 2017-04-07 05:21:22 UTC], ["updated_at", 2017-04-07 05:21:22 UTC], ["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.7ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 103.5ms
+Sent mail to jacob.et.cetera@gmail.com (6.1ms)
+Date: Fri, 07 Apr 2017 00:21:22 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jacob.et.cetera@gmail.com
+Message-ID: <58e721d2d3bef_141c3fc63c14dc189879c@iMac-de-Jacobo.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello jacob.et.cetera@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=qCUb_5fmxNbucWynRsuQ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 625ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:21:22 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2017-04-07 00:21:39 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering users/passwords/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/passwords/new.html.erb within layouts/application (3.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 96ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2017-04-07 00:21:42 -0500
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RwrGDRSZH7UK7//htKCOvN2gmw4L4fD/DVP8pgnxfPrQF80rV2myZx61h9RcDvWV6GpvMFUXXGvX86okfS3/gA==", "user"=>{"email"=>"jacob.et.cetera@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacob.et.cetera@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "ffae916b813d3b82260b2d2180049a69cdce9afbc5352db9720dec22a908ca05"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.7ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "ffae916b813d3b82260b2d2180049a69cdce9afbc5352db9720dec22a908ca05"], ["reset_password_sent_at", 2017-04-07 05:21:42 UTC], ["updated_at", 2017-04-07 05:21:42 UTC], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/mailer/reset_password_instructions.html.erb
+  Rendered users/mailer/reset_password_instructions.html.erb (0.6ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 15.2ms
+Sent mail to jacob.et.cetera@gmail.com (2.5ms)
+Date: Fri, 07 Apr 2017 00:21:42 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jacob.et.cetera@gmail.com
+Message-ID: <58e721e65f179_141c3fc63c15415898812@iMac-de-Jacobo.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello jacob.et.cetera@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=sjBfsRhj2oNxrXLT5ANQ">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 44ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-07 00:21:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+

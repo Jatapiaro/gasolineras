@@ -1,23 +1,21 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>User:</strong>
-  <%= @vehicle.user.name %>
-</p>
-
-<p>
-  <strong>Brand:</strong>
+  <strong>Marca:</strong>
   <%= @vehicle.brand %>
 </p>
 
 <p>
-  <strong>Model:</strong>
+  <strong>Modelo:</strong>
   <%= @vehicle.model %>
 </p>
 
 <p>
-  <strong>Year:</strong>
+  <strong>Año:</strong>
   <%= @vehicle.year %>
+</p>
+
+<p>
+  <strong>Kilometros por litro:</strong>
+  <%= @vehicle.fuel_efficiency %>
 </p>
 
 <%= link_to 'Editar', edit_vehicle_path(@vehicle) %> |

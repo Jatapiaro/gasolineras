@@ -35,9 +35,9 @@ class WelcomeController < ApplicationController
 				    width: 32,
 				    height: 32,
 				})
-			end			
+			end
+			Rails.logger.debug("Usuario: "+data[0].to_s)			
 		end
-	  	Rails.logger.debug("Usuario: "+data[0].to_s)
 	end
 
 
