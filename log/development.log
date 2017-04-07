@@ -17337,3 +17337,45 @@ Usuario: {"nombre"=>"Gasolineria Mallorca, S.A. de C.V.", "direccion"=>"Aquiles 
 Completed 200 OK in 2429ms (Views: 89.4ms | ActiveRecord: 1.0ms)
 
 
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/jacobotapia/Desktop/gasolineras/app/models/application_record.rb:1)
+Started POST "/login.json" for ::1 at 2017-04-07 00:09:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"inventado@inventado.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-04-07 05:09:43 UTC], ["last_sign_in_at", 2017-04-06 19:22:33 UTC], ["sign_in_count", 6], ["updated_at", 2017-04-07 05:09:43 UTC], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT  "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."body" = ? ORDER BY "authentication_tokens"."id" ASC LIMIT ?[0m  [["body", "588d06d00a58c4f2a72d9c7706980296183795c92bf5fa73146227c5a11a9c6c"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[32mINSERT INTO "authentication_tokens" ("body", "user_id", "last_used_at", "ip_address", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "588d06d00a58c4f2a72d9c7706980296183795c92bf5fa73146227c5a11a9c6c"], ["user_id", 1], ["last_used_at", 2017-04-07 05:09:43 UTC], ["ip_address", "::1"], ["user_agent", "PostmanRuntime/3.0.1"], ["created_at", 2017-04-07 05:09:43 UTC], ["updated_at", 2017-04-07 05:09:43 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.5ms)
+Completed 200 OK in 464ms (Views: 16.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/vehicles.json" for ::1 at 2017-04-07 00:10:08 -0500
+Processing by VehiclesController#index as JSON
+  Parameters: {"vehicle"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "inventado@inventado.com"], ["LIMIT", 1]]
+  [1m[36mAuthenticationToken Load (0.1ms)[0m  [1m[34mSELECT "authentication_tokens".* FROM "authentication_tokens" WHERE "authentication_tokens"."user_id" = ?[0m  [["user_id", 1]]
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered vehicles/_vehicle.json.jbuilder (0.6ms)
+  Rendered vehicles/index.json.jbuilder (25.5ms)
+Completed 200 OK in 85ms (Views: 52.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout.json" for ::1 at 2017-04-07 00:10:38 -0500
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"X-User-Token"=>"_AE_fWSsADjyUBYNWkkv", "X-User-Email"=>"inventado@inventado.com", "session"=>{"X-User-Token"=>"_AE_fWSsADjyUBYNWkkv", "X-User-Email"=>"inventado@inventado.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
