@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
 
 
 	def index
+
 		url = "https://gasolineria.herokuapp.com/developer/estacionesSinCosto"
 		key = "ViTThTQd9jLCSvFGZxNuDpRwFhhabalL"
 

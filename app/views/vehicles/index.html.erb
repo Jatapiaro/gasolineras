@@ -22,7 +22,7 @@
         <td><%= vehicle.model %></td>
         <td><%= vehicle.year %></td>
         <td><%= vehicle.fuel_efficiency %></td>
-        <td><%= link_to 'Ver', vehicle %></td>
+        <td><%= link_to 'Ver', vehicle, :"data-turbolinks" => false %></td>
         <td><%= link_to 'Editar', edit_vehicle_path(vehicle) %></td>
         <td><%= link_to 'Eliminar', vehicle, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>

@@ -13,6 +13,65 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
+
+    url = "https://gasolineria.herokuapp.com/developer/estacionesConsumo"
+    key = "ViTThTQd9jLCSvFGZxNuDpRwFhhabalL"
+   
+    @lat
+    @long
+
+    if Rails.env.development?
+      @lat = '19.2564776'
+      @long = '-99.0184185'
+    else
+      @lat = request.location.latitude.to_s
+      @long = request.location.longitude.to_s
+    end
+
+    @stations = Array.new
+
+    var = HTTParty.get(url+"/"+key+"/"+@lat+"/"+@long+"/"+@vehicle.fuel_efficiency.to_s)
+    data = var.parsed_response["gasolineras"]
+
+    tu = Station.new({"nombre"=>"Tu ubicación", "direccion"=>"", "distancia"=>"0.0", "longitud"=>@long, "id"=>"-1", "latitud"=>@lat})
+    @stations.push(tu)
+
+    ##Rails.logger.debug("Gas: "+data[0]['precios'].to_s) 
+
+    data.each do |x| 
+      s = Station.new(x)
+      precios = ''
+      x['precios'].each do |k,v|
+        ##Rails.logger.debug(k.to_s+": $"+v.to_s)
+        precios+=(k.to_s+": $"+v.to_s)+" "
+      end
+      s.precio_hardcode = precios
+      Rails.logger.debug(s.precio_hardcode) 
+      @stations.push(s)
+    end
+    
+    @hash = Gmaps4rails.build_markers(@stations) do |s, marker|
+      marker.lat s.latitud
+      marker.lng s.longitud
+      marker.title s.nombre
+      if s.id == '-1'
+        marker.picture ({
+          url: "http://maps.google.com/mapfiles/ms/micons/man.png",
+          width: 32,
+          height: 32,
+        })  
+      else
+        marker.picture ({
+          url: "http://maps.google.com/mapfiles/kml/pal2/icon21.png",
+          width: 32,
+          height: 32,
+        }) 
+        marker.infowindow  s.direccion + " A "+s.distancia.to_s+" km de distancia, sus precios son "+s.precio_hardcode
+
+      end
+    end
+
+    #Rails.logger.debug("Gas: "+@stations.to_s)
   end
 
   # GET /vehicles/new
@@ -81,4 +140,5 @@ class VehiclesController < ApplicationController
     def validate_user
       redirect_to new_user_session_path, notice: "Necesitas inicar sesión"
     end
+
 end
