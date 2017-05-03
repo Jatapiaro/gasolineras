@@ -1,9 +1,6 @@
 <div style='width:x%; text-align: center; margin-left: auto; margin-right: auto'>
+<h2>Regístrate </h2>
 
-<h2>Regístrate</h2>
-
-<h2>Registrate </h2>
-</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -34,7 +31,6 @@
   <div class="input-field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> carácteres minimo)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off", placeholder:"6 caracteres mínimo" %>
   </div>
@@ -44,6 +40,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+
   <div class="actions">
     <%= f.submit "Sign up", :class=>"btn" %>
   </div>
@@ -52,6 +49,6 @@
 <%= render "users/shared/links" %>
 </form>
 </div>
-
 </div>
+
 </div>
