@@ -1,12 +1,19 @@
-<h2>Log in</h2>
+<div style='width:x%; text-align: center; margin-left: auto; margin-right: auto'>
+<h2>Log in </h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <div class = "container">
+    <form class = "col s4">
+      <div class="row">
+        <div class="input-field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, size:"10" %>
+        </div>
+      </div>
 
-  <div class="field">
+      <div class="field">
+      <div class = "row">
+      <div class = "input-field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -19,8 +26,11 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in" , :class =>"btn" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+  </form>
+</div>
+</div>
