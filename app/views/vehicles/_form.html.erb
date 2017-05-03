@@ -1,8 +1,12 @@
 <%= form_for(vehicle) do |f| %>
   <% if vehicle.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
-
+      <% if vehicle.errors.count == 1%>
+        <h4><%= pluralize(vehicle.errors.count, "error") %> no permitió que este vehiculo fuera guardado:</h4>
+      <%end%>
+      <% if vehicle.errors.count > 1%>
+        <h4><%= pluralize(vehicle.errors.count, "errores") %> no permitieron que este vehiculo fuera guardado:</h4>
+      <%end%>
       <ul>
       <% vehicle.errors.full_messages.each do |message| %>
         <li><%= message %></li>
