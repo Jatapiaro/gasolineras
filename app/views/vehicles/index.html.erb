@@ -1,34 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Vehículos</h1>
+ <ul class="collection with-header">
 
-<table>
-  <thead>
-    <tr>
-      <!--<th>User</th>-->
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th>Año</th>
-      <th>Kilometros por litro</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <li class="collection-header"><h4>Vehículos</h4></li>
     <% @vehicles.each do |vehicle| %>
-      <tr>
-        <!--<td><%= vehicle.user %></td>-->
-        <td><%= vehicle.brand %></td>
-        <td><%= vehicle.model %></td>
-        <td><%= vehicle.year %></td>
-        <td><%= vehicle.fuel_efficiency %></td>
-        <td><%= link_to 'Ver', vehicle, :"data-turbolinks" => false %></td>
-        <td><%= link_to 'Editar', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Eliminar', vehicle, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <li class="collection-item avatar">
+        <img src="https://images.vexels.com/media/users/3/127711/isolated/preview/384e0b3361d99d9c370b4037115324b9-flat-vintage-car-icon-by-vexels.png" alt="" class="circle">
+        <span class="title"><%= link_to vehicle.model, vehicle, :"data-turbolinks" => false %></span>
+          <p><%= vehicle.brand %><br>
+            <%= vehicle.year %><br>
+            <%= link_to 'Editar', edit_vehicle_path(vehicle) %>
+          </p>
+          <%= link_to '<i class="secondary-content material-icons">delete</i>'.html_safe, vehicle, method: :delete, data: { confirm: '¿Estás seguro?' } %>
+      </li>
+    <%end%>
+ </ul>
 
 <br>
 
