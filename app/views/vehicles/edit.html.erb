@@ -1,6 +1,10 @@
-<h1>Editing Vehicle</h1>
+<h1>Editando Vehículo</h1>
 
 <%= render 'form', vehicle: @vehicle %>
 
-<%= link_to 'Ver', @vehicle %> |
-<%= link_to 'Regresar', vehicles_path %>
+<div class="row">
+  <div class="actions col s6">
+    <%= link_to 'Ver', @vehicle %> |
+    <%= link_to 'Regresar', vehicles_path, :"data-turbolinks" => false %>
+  </div>
+</div>
