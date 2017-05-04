@@ -1,51 +1,50 @@
-<%= form_for(vehicle) do |f| %>
-  <% if vehicle.errors.any? %>
-    <div id="error_explanation">
-      <% if vehicle.errors.count == 1%>
-        <h4><%= pluralize(vehicle.errors.count, "error") %> no permitió que este vehiculo fuera guardado:</h4>
-      <%end%>
-      <% if vehicle.errors.count > 1%>
-        <h4><%= pluralize(vehicle.errors.count, "errores") %> no permitieron que este vehiculo fuera guardado:</h4>
-      <%end%>
-      <ul>
-      <% vehicle.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class = "row">
-    <div class="input-field col s6">
-      <%= f.label :brand%>
+<%= form_for(vehicle) do |f| %>
+<% if vehicle.errors.any? %>
+<div id="error_explanation">
+  <% if vehicle.errors.count == 1%>
+  <h4><%= pluralize(vehicle.errors.count, "error") %> no permitió que este vehiculo fuera guardado:</h4>
+  <%end%>
+  <% if vehicle.errors.count > 1%>
+  <h4><%= pluralize(vehicle.errors.count, "errores") %> no permitieron que este vehiculo fuera guardado:</h4>
+  <%end%>
+  <ul>
+    <% vehicle.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="container">
+  
+    <div class="input-field col s12">
+      <%= f.label :brand%><br />
       <%= f.text_field :brand, :class=>"validate" %>
     </div>
-  </div>
 
-  <div class = "row">
-    <div class="input-field col s6">
-      <%= f.label :model %>
+    <div class="input-field col s12">
+      <%= f.label :model %><br />
       <%= f.text_field :model, :class=>"validate"%>
     </div>
-  </div>
 
-  <div class = "row">
-    <div class="input-field col s6">
-      <%= f.label :year %>
+
+
+    <div class="input-field col s12">
+      <%= f.label :year %><br />
       <%= f.number_field :year, :class=>"validate" %>
     </div>
-  </div>
 
-  <div class = "row">
-    <div class="input-field col s6">
-      <%= f.label :fuel_efficiency %>
+    <div class="input-field col s12">
+      <%= f.label :fuel_efficiency %><br />
       <%= f.number_field :fuel_efficiency, :class=>"validate"%>
     </div>
-  </div>
 
-  <div class = "row">
-    <div class="actions col s6">
-      <%= f.submit %>
+    <br></br>
+
+    <div class="actions col s12">
+      <%= f.submit :class=>'btn pink' %>
     </div>
-  </div>
-<% end %>
+  
+</div>
+<% end %>  
+

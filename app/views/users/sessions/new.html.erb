@@ -1,7 +1,7 @@
 <div style='width:x%; text-align: center; margin-left: auto; margin-right: auto'>
-<h2>Log in </h2>
+  <h2>Log in </h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class = "container">
     <form class = "col s4">
       <div class="row">
@@ -12,25 +12,29 @@
       </div>
 
       <div class="field">
-      <div class = "row">
-      <div class = "input-field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+        <div class = "row">
+          <div class = "input-field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+          <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+          <% end -%>
+
+          <br></br>
+          
+          <div class="actions">
+            <%= f.submit "Log in" , :class =>"btn pink" %>
+          </div>
+          <% end %>
+
+          <br></br>
+
+          <%= render "users/shared/links" %>
+        </form>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" , :class =>"btn" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
-  </form>
-</div>
-</div>

@@ -1,12 +1,15 @@
 <div style='width:x%; text-align: center; margin-left: auto; margin-right: auto'>
-<h1>Editando vehículo</h1>
-</div>
+	<h1>Editando vehículo</h1>
 
-<%= render 'form', vehicle: @vehicle %>
 
-<div class="row">
-  <div class="actions col s6">
-    <%= link_to 'Ver', @vehicle %> |
-    <%= link_to 'Regresar', vehicles_path, :"data-turbolinks" => false %>
-  </div>
+
+	<%= render 'form', vehicle: @vehicle %>
+
+	<br></br>
+
+	<%= link_to 'Ver', @vehicle %> |
+	<%= link_to 'Regresar', vehicles_path, :"data-turbolinks" => false %>
+
+	<br></br>
+
 </div>
