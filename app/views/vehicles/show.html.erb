@@ -22,9 +22,9 @@
   <%= @vehicle.fuel_efficiency %>
 </p>
 
-<div style='width: 800px;'>
+<div id="map-container">
 	<h4>Gasolineras y precios</h4>
-	<div id="map" style='width: 800px; height: 400px;'></div>
+	<div id="map"></div>
 </div>
 
 
@@ -40,5 +40,27 @@
 
 	  handler.bounds.extendWith(markers);
 	  handler.fitMapToBounds();
+
+	  handler.map.centerOn(markers[0]); 
+	  handler.getMap().setZoom(12);
+
 	});
 </script>
+
+<style type="text/css">
+	#map-container {
+	  padding: 6px;
+	  border-width: 1px;
+	  border-style: solid;
+	  border-color: #ccc #ccc #999 #ccc;
+	  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+	  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+	  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+	//  width: 500px;
+	}
+
+	#map {
+	//  width: 500px;
+	    height: 500px;
+	}
+</style>
